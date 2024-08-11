@@ -4,9 +4,15 @@ trigger:
  - main
 
 variables:
+<<<<<<< HEAD
+  resourceGroupName: 'rg-bicep-demo-0017'
+  location: 'southeastasia'
+  webAppName: 'bicep00211117'
+=======
   resourceGroupName: 'rg-webapp-bicep-pipe'
   location: 'southeastasia'
   webAppName: 'bicep002111127'
+>>>>>>> 6cf18b864238928b294d620c85e8073ad7a480d9
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
 
 pool:
