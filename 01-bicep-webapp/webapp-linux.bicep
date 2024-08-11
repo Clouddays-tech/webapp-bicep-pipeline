@@ -7,6 +7,7 @@ param location string = resourceGroup().location // Location for all resources
 var appServicePlanName = 'hello-webappservice-devops'
 var webSiteName = toLower('wapp-${webAppName}')
 
+// Creating AppService Plan
 resource appServicePlan 'Microsoft.Web/serverfarms@2020-06-01' = {
   name: appServicePlanName
   location: location
@@ -19,6 +20,7 @@ resource appServicePlan 'Microsoft.Web/serverfarms@2020-06-01' = {
   }
 }
 
+// Creating WebApp
 resource appService 'Microsoft.Web/sites@2020-06-01' = {
   name: webSiteName
   location: location
