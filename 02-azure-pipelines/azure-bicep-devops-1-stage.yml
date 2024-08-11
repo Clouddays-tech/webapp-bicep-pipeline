@@ -49,5 +49,4 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az deployment group create --resource-group $(resourceGroupName) \
-         --template-file $(templateFile) \
-         --parameters webAppName=$(webAppName)
+         --template-file $(templateFile) 
