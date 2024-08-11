@@ -5,7 +5,7 @@ trigger:
 
 variables:
   resourceGroupName: 'rg-bicep-demo-0017'
-  location: 'westeurope'
+  location: 'southeastasia'
   webAppName: 'bicep00211117'
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
 
@@ -38,8 +38,8 @@ steps:
       az --version
       az group create --name $(resourceGroupName) --location $(location)
       az deployment group what-if --resource-group $(resourceGroupName) \
-               --template-file $(templateFile) \
-               --parameters webAppName=$(webAppName)
+               --template-file $(templateFile) 
+#              --parameters webAppName=$(webAppName)
 
 - task: AzureCLI@2
   displayName: Deploy Bicep To Azure
