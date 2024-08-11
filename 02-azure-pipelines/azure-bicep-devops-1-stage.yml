@@ -4,9 +4,9 @@ trigger:
  - main
 
 variables:
-  resourceGroupName: 'rg-bicep-demo-0017'
-  location: 'westeurope'
-  webAppName: 'bicep00211117'
+  resourceGroupName: 'rg-webapp-bicep-pipe'
+  location: 'southeastasia'
+  webAppName: 'bicep002111127'
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
 
 pool:
@@ -49,4 +49,5 @@ steps:
     scriptLocation: 'inlineScript'
     inlineScript: |
       az deployment group create --resource-group $(resourceGroupName) \
-         --template-file $(templateFile) 
+         --template-file $(templateFile) \
+         --parameters webAppName=$(webAppName) 
